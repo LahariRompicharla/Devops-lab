@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+</head>
+<body>
+    <div name="container">
+        <h1>Event Registration</h1>
+        <form id="form">
+            <label>Full Name: </label>
+            <input id="name" type="text">
+            <br><br>
+            <label>Email:</label>
+            <input id="email" type="email">
+            <br>
+            <br>
+            <label>Select Event</label>
+            <select name="event" id="event">
+                <option value="Hackathon">Hackathon</option>
+                <option value="Seminar">Seminar</option>
+                <option value="Presentation">Presentation</option>
+            </select>
+            <button type="submit">Register</button>
+        </form>
+        <p id="message"></p>
+    </div>
+    <script>
+
+        const form=document.getElementById("form");
+        form.addEventListener("submit",function event(){
+            
+            const message=document.getElementById("message");
+            message.innerHTML="Registration Successful";
+            
+        })
+        
+    </script>
+</body>
+</html>
